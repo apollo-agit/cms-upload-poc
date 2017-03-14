@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script data-require="jquery@*" data-semver="2.0.0" src="./bower_components/jquery/dist/jquery.js"></script>
+  <link data-require="bootstrap-css@3.3.6" data-semver="3.3.6" rel="stylesheet" href="./bower_components/bootstrap/dist/css/bootstrap.css" />
+  <script data-require="bootstrap@3.3.6" data-semver="3.3.6" src="./bower_components/bootstrap/dist/js/bootstrap.js"></script>
+  <script src="./js/cms-upload-poc.js"></script>
+  <link rel="stylesheet" href="./style/registration-wc-poc.css" />
+</head>
+
+<body>
+  <div class="jumbotron">
+    <h2>Admission Document Upload</h2>
+  </div>
+
+
+  <div class="container">
+    <div class="panel panel-default">
+      <div class="panel-body">
+
+        <div class="row">
+          <div class="col-lg-6">
+            <div id="document-type" class="upload-button">
+              <select class="form-control">
+                <option>Birth Certificate</option>
+                <option>High School Diploma</option>
+                <option>High School Transcript</option>
+                <option>Government ID Card</option>
+                <option>Other</option>
+              </select>
+            </div>
+          </div>
+
+        </div>
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="upload-form">
+              <span class="btn btn-primary btn-file"><span>Choose file</span>
+              <input id="file-button" type="file" class="fileinput" multiple />
+              </span>
+              <span class="fileinput-filename"></span><span id="file-name" class="fileinput-new">No file chosen</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="row upload">
+        <div class="col-lg-6">
+          <div class="progress">
+            <div id="file-bar" class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <button id="list-collapse" type="button" class="btn btn-primary" title="Click here to toggle files" data-toggle="collapse" data-target="#file-list"><span id="button-collapse-badge" class="glyphicon glyphicon-collapse-down badge">0</span></button>
+    <div class="row">
+      <div id="file-list" class="collapse">
+
+        <div class="file-well">
+          <div class="row">
+            <div class="col-sm-4"></div>
+            <div class="col-sm-4"></div>
+            <div class="col-sm-4"></div>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+
+
+  </div>
+
+</body>
+
+</html>

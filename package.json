@@ -1,0 +1,42 @@
+{
+  "name": "cms-upload-poc",
+  "version": "1.0.0",
+  "description": "POC for a CMS file uploading",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/apollo-agit/cms-upload-poc.git"
+  },
+  "author": "@Ian",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/apollo-agit/cms-upload-poc/issues"
+  },
+  "homepage": "https://github.com/apollo-agit/cms-upload-poc.git#README",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-bowercopy": "^1.2.4",
+    "grunt-cli": "^0.1.13",
+    "grunt-concat-in-order": "^0.1.6",
+    "grunt-contrib-clean": "^0.6.0",
+    "grunt-contrib-concat": "^0.5.1",
+    "grunt-contrib-copy": "^0.8.2",
+    "grunt-contrib-sass": "^0.9.2",
+    "grunt-contrib-uglify": "^0.9.2",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-express": "^1.4.1",
+    "grunt-parallel": "^0.4.1",
+    "install": "^0.1.8",
+    "jit-grunt": "^0.9.1",
+    "npm": "^3.10.10"
+  },
+  "dependencies": {
+    "alfresco-js-api": "^1.2.2",
+    "body-parser": "^1.15.2",
+    "cors": "^2.8.1",
+    "multer": "^1.3.0"
+  }
+}

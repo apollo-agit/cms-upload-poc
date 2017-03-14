@@ -1,0 +1,17 @@
+{
+  "name": "cms-upload-poc",
+  "version": "1.0.0",
+  "authors": [
+    "Ian"
+  ],
+  "description": "POC for a CMS file uploading",
+  "main": "index.html",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "https://github.com/apollo-agit/cms-upload-poc.git#README",
+  "private": true,
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "jquery": "^3.1.1"
+  }
+}
