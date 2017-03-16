@@ -32,19 +32,6 @@
             }
         },
 
-        sass: {
-            options: {
-                style: 'expanded',
-                loadPath: ['.']
-            },
-            dist: {
-                files: [{
-                    src: '<%= config.app %>/style/style.scss',
-                    dest: '<%= config.dist %>/style/registration-wc-poc.css'
-                }]
-            }
-        },
-
         concat_in_order: {
             dist: {
                 files: [{
