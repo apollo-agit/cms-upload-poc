@@ -26,6 +26,7 @@ apiRouter.route('/upload')
 		fileEntity = new FileEntity(req, serverconfig);
 		filedb.insert(fileEntity);
 		alfrescoJsApi.upload(req.file.path, req.file.originalname, req.body.type, '');
+		res.send('success');
 	})
 	.get(function(req, res) {
 		console.log('get upload called');
