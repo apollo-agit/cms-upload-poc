@@ -18,7 +18,7 @@ CmsApi = function(cms, creds) {
     }
 
     this.upload = function(path, filename, type, cmsfolder) {
-    	var fileToUpload = fs.createReadStream('./' + path);
+     	var fileToUpload = fs.createReadStream('./' + path);
 
     	this.cms.upload.uploadFile(fileToUpload)
 	    .then(function () {
