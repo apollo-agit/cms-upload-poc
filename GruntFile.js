@@ -111,6 +111,14 @@
                     dest: '<%= config.dist %>'
                 }]
             },
+            css: {
+                files: [{
+                    expand: true,
+                    cwd: '<%= config.app %>/',
+                    src: ['**/*.css'],
+                    dest: '<%= config.dist %>'
+                }]
+            },
             server: {
                 files: [{
                     expand: true,
@@ -166,7 +174,7 @@
     });
 
     grunt.registerTask('buildjs', ['concat_in_order','bowercopy:js']);
-    grunt.registerTask('copyassets', ['sass:dist', 'copy:html',  'bowercopy:css', 
+    grunt.registerTask('copyassets', ['copy:html',  'copy:css', 'bowercopy:css', 
         'bowercopy:eot', 'bowercopy:woff', 'bowercopy:woff2', 'bowercopy:svg', 'bowercopy:ttf']);
     grunt.registerTask('copyserver', ['copy:server']);
 

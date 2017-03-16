@@ -4,6 +4,7 @@ var multer  = require('multer')
 var upload = multer({dest: serverconfig.filedir});
 var apiRouter = express.Router(); 
 var alfrescoJsApi = require('./cms-client');
+var fs = require('fs');
 
 var db = require('node-localdb');
 var filedb = db(serverconfig.dbdir + 'file.json');

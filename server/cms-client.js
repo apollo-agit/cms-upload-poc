@@ -17,10 +17,10 @@ CmsApi = function(cms, creds) {
         });
     }
 
-    this.upload = function(path, filename, type, cmsfolder) {
+    this.upload = function(path, fname, type, cmsfolder) {
      	var fileToUpload = fs.createReadStream('./' + path);
 
-    	this.cms.upload.uploadFile(fileToUpload)
+    	this.cms.upload.uploadFile(fileToUpload, serverconfig.folder, null, null, {filename: fname})
 	    .then(function () {
 	        console.log('File ' + filename + ' Uploaded to ' + cmsfolder);
 	    }, function (error) {
