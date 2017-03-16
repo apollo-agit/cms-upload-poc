@@ -14,8 +14,8 @@ var FileEnity = require('./file-entity');
 var storage = multer.diskStorage({
   destination: serverconfig.filedir,
   filename: function (req, file, cb) {
-  	console.log(req.body);
-    cb(null, serverconfig.user_first_name + serverconfig.user_last_name + '-' + Date.now());
+  	console.log(file);
+    cb(null, serverconfig.user_first_name + serverconfig.user_last_name + '-' + Date.now() + '-' + file.originalname);
   }
 })
 
@@ -25,10 +25,6 @@ apiRouter.route('/upload')
 	.post(upload.single('file'), function(req, res) {
 		fileEntity = new FileEntity(req, serverconfig);
 		filedb.insert(fileEntity);
-
-		console.log(req.file);
-		console.log(req.body.filetype);
-
 		alfrescoJsApi.upload(req.file.path, req.file.originalname, req.body.type, '');
 	})
 	.get(function(req, res) {
